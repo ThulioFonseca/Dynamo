@@ -16,8 +16,8 @@
 
 .sidebar-dark {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1c1f22);
-  box-shadow: 21px 21px 41px #141518, -21px -21px 41px #202225;
+  background: linear-gradient(160deg, #353a41, #1a1e20);
+  box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
   height: 95vh;
   width: 15vw;
   max-height: 97vh;
@@ -44,8 +44,11 @@
 
 .sidebar-header {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 10vh 2vw 10vh 2vw;
+  margin: 1vw 2vw 1.5vw 2vw;
   padding: 0;
 }
+
+.logo {
+  height: 8vw;
+  width: 8vw;
+  }

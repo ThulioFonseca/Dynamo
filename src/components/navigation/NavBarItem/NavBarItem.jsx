@@ -5,13 +5,7 @@ export default function NavbarItem(props) {
   const { title, path, icon, disabled, active } = props;
 
   const location = useLocation();
-  const navigate = useNavigate();
-
   const isActive = location.pathname === path;
-
-  const handleClick = () => {
-    navigate(path);
-  };
 
   return (
     !disabled && (

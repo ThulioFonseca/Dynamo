@@ -7,15 +7,15 @@ export default function Dashboard() {
     <div className="row row-cols-2">
       <div className="col">
         <div className="d-flex">
-          <Card size={"sm"} type={"toggle"} label={"Lâmpada 1"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
+          <Card size={"sm"} type={"toggle"} label={"Lâmpada Sala"} icon={"emoji_objects"} active={true}/>
           <Card size={"md"}>OLA</Card>
-          <Card size={"sm"} type={"toggle"} label={"Lâmpada 2"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
+          <Card size={"sm"} type={"toggle"} label={"Lâmpada Quarto"} icon={"emoji_objects"}/>
         </div>
         <div className="d-flex">
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 3"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 4"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 5"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 6"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Banheiro"} icon={"emoji_objects"}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Varanda"} icon={"emoji_objects"}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Cozinha"} icon={"emoji_objects"}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Sacada"} icon={"emoji_objects"}/>
         </div>
         <div className="d-flex">
           <Card size={"lg"}>OLA</Card>
@@ -26,8 +26,8 @@ export default function Dashboard() {
           <Card size={"lg"}>OLA</Card>
         </div>
         <div className="d-flex">
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 7"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
-        <Card size={"sm"} type={"toggle"} label={"Lâmpada 8"} icon={<FontAwesomeIcon icon={faLightbulb}/>}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Garagem"} icon={"emoji_objects"}/>
+        <Card size={"sm"} type={"toggle"} label={"Lâmpada Suite"} icon={"emoji_objects"}/>
 
           <Card size={"md"}>OLA</Card>
         </div>

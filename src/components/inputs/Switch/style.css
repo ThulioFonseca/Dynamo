@@ -1,23 +1,25 @@
 .switch {
-  --button-width: 2.9vw;
-  --button-height: 1.4vw;
-  --toggle-diameter: 1.2vw;
+  --button-width: 2.2vw;
+  --button-height: 1vw;
+  --toggle-diameter: 0.9vw;
   --button-toggle-offset: calc(
     (var(--button-height) - var(--toggle-diameter)) / 2
   );
   --toggle-shadow-offset: px;
-  --toggle-wider: 3em;
+  --toggle-wider: 0.8vw;
   --color-grey: #e0e0e0;
+  --color-grey-dark: #464f5a;
+
 }
 
 .slider {
   display: inline-block;
   width: var(--button-width);
   height: var(--button-height);
-  background-color: var(--color-grey);
+  background-color: var(--color-grey-dark);
   border-radius: calc(var(--button-height) / 2);
   position: relative;
-  transition: 0.3s all ease-in-out;
+  transition: 0.1s all ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.42) 1px 1px 5px inset, rgba(241, 241, 241, 0.45) 0px 1px 0px 0px;
 }
 
@@ -26,17 +28,19 @@
   display: inline-block;
   width: var(--toggle-diameter);
   height: var(--toggle-diameter);
-  background-color: #fff;
+  background-color: #b4bfce;
   border-radius: calc(var(--toggle-diameter) / 2);
   position: absolute;
   top: var(--button-toggle-offset);
   transform: translateX(var(--button-toggle-offset));
   box-shadow: var(--toggle-shadow-offset) 0
     calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
-  transition: 0.3s all ease-in-out;
+  transition: 0.1s all ease-in-out;
 }
 
 .switch input[type="checkbox"]:checked + .slider {
+  transition: 0.8s all ease-in-out;
+
   background: linear-gradient(
     45deg,
     rgba(29, 185, 255, 1) 0%,
