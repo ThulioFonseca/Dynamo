@@ -1,7 +1,7 @@
 .sidebar {
   border-radius: 2vw;
-  background: #e0e0e0;
-  box-shadow: 19px 19px 38px #bababa, -19px -19px 38px #ffffff;
+  background: #eef0f4;
+  box-shadow: 12.01px 12.01px 18px #c9cbce, -12.01px -12.01px 18px #ffffff;
   height: 95vh;
   width: 15vw;
   max-height: 97vh;
@@ -11,11 +11,27 @@
   overflow: hidden;
   transition: all 0.5s ease 0s;
   margin: 2vh 2vh 0vw 1.2vw;
+  z-index: 10;
+}
+
+.sidebar-dark {
+  border-radius: 2vw;
+  background: linear-gradient(160deg, #353a41, #1c1f22);
+  box-shadow: 21px 21px 41px #141518, -21px -21px 41px #202225;
+  height: 95vh;
+  width: 15vw;
+  max-height: 97vh;
+  min-height: 500px;
+  max-width: 15vw;
+  min-width: 100px;
+  overflow: hidden;
+  transition: all 0.5s ease 0s;
+  margin: 2vh 2vh 0vw 1.2vw;
+  z-index: 10;
 }
 
 .sidebar-itens {
   position: relative;
-  padding: 0.86vw;
   display: flex;
   flex-direction: column;
   -webkit-box-pack: justify;

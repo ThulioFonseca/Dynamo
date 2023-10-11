@@ -10,13 +10,13 @@ export default function SideBar(props) {
   };
 
   return (
-    <div className="sidebar">
+    <div className="sidebar-dark">
       <div className="sidebar-header">
         <FontAwesomeIcon icon={faSignal} />
         <span>LOGO</span>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <hr style={{ width: "12vw", color: "#6d6d6d", margin: "0.2vw" }} />
+        <hr style={{ width: "12vw", color: "rgb(114, 130, 153)", margin: "0.2vw" }} />
       </div>
       <nav>
         <ul className="sidebar-itens">

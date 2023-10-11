@@ -1,5 +1,7 @@
 #root {
-  background: #ffffff;
+  /*background: #eef0f4;*/
+  background: #26282b;
+
 }
 
 *,
@@ -14,9 +16,4 @@
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
-}
-
-.display-sideBar {
-  margin-left: 0;
-  display: flex;
 }

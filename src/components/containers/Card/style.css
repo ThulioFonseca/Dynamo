@@ -1,0 +1,127 @@
+.card-sm {
+  border-radius: 2vw;
+  background: #eef0f4;
+  box-shadow: 12.01px 12.01px 15px #c9cbce, -2.01px -2.01px 19px #ffffff;
+  height: 8.5vw;
+  width: 8.5vw;
+  max-height: 20vh;
+  min-height: 8.5vw;
+  min-width: 8.5vw;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-sm-dark {
+  border-radius: 2vw;
+  background: linear-gradient(160deg, #353a41, #1c1f22);
+  box-shadow: 21px 21px 41px #141518, -21px -21px 41px #202225;
+  height: 8.5vw;
+  width: 8.5vw;
+  max-height: 20vh;
+  min-height: 8.5vw;
+  min-width: 8.5vw;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-md {
+  border-radius: 2vw;
+  background: #eef0f4;
+  box-shadow: 12.01px 12.01px 15px #c9cbce, -2.01px -2.01px 19px #ffffff;
+  height: 8.5vw;
+  width: 18vw;
+  max-height: 25vh;
+  min-height: 8.5vw;
+  min-width: 18vw;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+}
+
+.card-md-dark {
+  border-radius: 2vw;
+  background: linear-gradient(160deg, #353a41, #1c1f22);
+  box-shadow: 21px 21px 41px #141518, -21px -21px 41px #202225;
+  height: 8.5vw;
+  width: 18vw;
+  max-height: 25vh;
+  min-height: 8.5vw;
+  min-width: 18vw;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+}
+
+.card-lg {
+  border-radius: 2vw;
+  background: #eef0f4;
+  box-shadow: 12.01px 12.01px 15px #c9cbce, -2.01px -2.01px 19px #ffffff;
+  height: 38vh;
+  width: 44vw;
+  max-height: 45vh;
+  min-height: 120px;
+  min-width: 180px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+}
+
+.card-lg-dark {
+  border-radius: 2vw;
+  background: linear-gradient(160deg, #353a41, #1c1f22);
+  box-shadow: 21px 21px 41px #141518, -21px -21px 41px #202225;
+  height: 38vh;
+  width: 44vw;
+  max-height: 45vh;
+  min-height: 120px;
+  min-width: 180px;
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 0.6vw;
+}
+
+.device-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0.2vw;
+  padding: 0;
+  font-size: 3vw;
+  color: rgb(168, 168, 168);
+}
+
+.icon-card {
+  margin: 0.2vw;
+  padding: 0;
+  height: 3vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.label-card {
+  margin-top: 0.1vw;
+  margin-bottom: 0.6vw;
+
+  font-size: 0.7vw;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: rgb(109, 109, 109);
+}
+
+.button-card {
+  margin: 0.2vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}

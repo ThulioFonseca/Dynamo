@@ -1,4 +1,3 @@
-import Navbar from "./components/containers/NavBar/Navbar.jsx";
 import { tabs } from "./config/tabs";
 import "./App.css";
 import SideBar from "./components/containers/SideBar/SideBar.jsx";

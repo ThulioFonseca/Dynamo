@@ -1,43 +1,48 @@
 .item {
-  padding: 1vh;
+  padding: 0.5vh;
   margin: 0.5vh;
   display: flex;
-  align-items: center;
   text-decoration: none;
-  color: rgb(109, 109, 109);
+  color: rgb(114, 130, 153);
   list-style: none;
   flex-wrap: wrap;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+
+
 }
 
 .item:hover {
-  border-radius: calc(2vh/3);
-  background: rgb(29, 185, 255);
-  background: linear-gradient(
-    45deg,
-    rgba(29, 185, 255, 1) 0%,
-    rgba(82, 115, 255, 1) 40%,
-    rgba(163, 42, 255, 1) 100%
-  );
-  color: rgb(235, 235, 235); ;
+  border-radius: 0;
+  color:  #4786ff;
+  border-left: 5px solid #2fa5ff;
+}
+
+.item:active {
+  transform: scale(0.95);
 }
 
 .item-active {
-  padding: 1vh;
+  padding: 0.5vh;
   margin: 0.5vh;
   display: flex;
   align-items: center;
   text-decoration: none;
   list-style: none;
   flex-wrap: wrap;
-  border-radius: calc(2vh/3);
-  background: rgb(29, 185, 255);
+  border-radius: calc(2vh / 3);
   background: linear-gradient(
     45deg,
     rgba(29, 185, 255, 1) 0%,
     rgba(82, 115, 255, 1) 40%,
     rgba(163, 42, 255, 1) 100%
   );
-  color: rgb(235, 235, 235); ;
+  color: rgb(235, 235, 235);
+  box-shadow: rgba(0, 0, 0, 0.42) 1px 1px 5px inset, rgba(241, 241, 241, 0.45) 0px 1px 0px 0px;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .title {
@@ -45,9 +50,11 @@
   font-size: 17px;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  padding: 0.3vw 0.5vw 0.1vw 0.5vw;
+
 }
 
 .icon {
-  padding: 0px 1vw 0vh 1vw;
+  padding: 0.1vw 0.5vw 0.1vw 2vw;
   font-size: 25px;
 }
