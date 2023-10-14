@@ -1,4 +1,6 @@
 
 export const icons = {
-    Lampada: "emoji_objects"
+    LAMPADA: "emoji_objects",
+    TERMOMETRO: "device_thermostat",
+    LDR: "wb_incandescent"
 }
