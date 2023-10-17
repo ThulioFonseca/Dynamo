@@ -1,15 +1,16 @@
 import { createContext, useEffect, useRef, useState } from "react";
-import config from "../config/config";
 
 export const WebsocketContext = createContext({
   isReady: false,
   value: null,
+  historic: [],
   sendMessage: () => {},
 });
 
 export const WebsocketProvider = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
   const [value, setValue] = useState(null);
+  const [historic, setHistoric] = useState([]);
 
   const ws = useRef(null);
 
@@ -17,9 +18,7 @@ export const WebsocketProvider = ({ children }) => {
     if (isReady) {
       ws.current.send(message);
     } else {
-      console.error(
-        "Tentativa de enviar mensagem quando a conexão não está pronta."
-      );
+      console.error("Conexão não estabelecida");
     }
   };
 
@@ -46,8 +45,22 @@ export const WebsocketProvider = ({ children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (value) {
+      setHistoric((prevHistoric) => {
+        const newHistoric = [...prevHistoric, value];
+        if (newHistoric.length > 10) {
+          newHistoric.splice(0, newHistoric.length - 10);
+        }
+        return newHistoric;
+      });
+    }
+  }, [value]);
+
   return (
-    <WebsocketContext.Provider value={{ isReady, value, sendMessage }}>
+    <WebsocketContext.Provider
+      value={{ isReady, value, historic, sendMessage }}
+    >
       {children}
     </WebsocketContext.Provider>
   );

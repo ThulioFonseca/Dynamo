@@ -2,13 +2,13 @@
   /*border-radius: 2vw;
   /*background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
  /* box-shadow: 5px 5px 10px #b1b1b1, -5px -5px 10px #ffffff;*/
-  height: 95vh;
-  width: 85vw;
-  max-height: 97vh;
+  height: 95%;
+  width: 85%;
+ /* max-height: 97vh;
   min-height: 500px;
-  min-width: 300px;
+  min-width: 300px;*/
   overflow: hidden;
   transition: all 0.5s ease 0s;
-  margin: 2vh 2vh 1.2vw .3vw;
-  padding: 5vh 2vw 5vh 2vw;
+  margin: 1.5vh .2vw 1.5vh .2vw;
+  padding: .5vh 0.2vw .5vh 0.2vw;
 }

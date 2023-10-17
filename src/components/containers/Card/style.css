@@ -18,15 +18,15 @@
 .card-sm-dark {
   border-radius: 2vw;
   background: linear-gradient(160deg, #353a41, #1a1e20);
-  box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
-  height: 8.5vw;
-  width: 8.5vw;
-  max-height: 20vh;
+  box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
+  height: 85%;
+  width: 100%;
+  /*max-height: 20vh;
   min-height: 8.5vw;
-  min-width: 8.5vw;
+  min-width: 8.5vw;*/
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 0.6vw;
+  margin: 1.25%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -44,21 +44,21 @@
   min-width: 18vw;
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 0.6vw;
+  margin: 1%;
 }
 
 .card-md-dark {
   border-radius: 2vw;
   background: linear-gradient(160deg, #353a41, #1a1e20);
-  box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
-  height: 8.5vw;
-  width: 18vw;
-  max-height: 25vh;
+  box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
+  height: 92%;
+  width: 50%;
+  /* max-height: 25vh;
   min-height: 8.5vw;
-  min-width: 18vw;
+  min-width: 18vw; */
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 0.6vw;
+  margin: 1.25%;
 }
 
 .card-lg {
@@ -72,20 +72,20 @@
   min-width: 180px;
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 0.6vw;
+  margin: 0.5%;
 }
 
 .card-lg-dark {
   border-radius: 2vw;
   background: linear-gradient(160deg, #353a41, #1a1e20);
-  box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
-  height: 38vh;
-  width: 44vw;
-  max-height: 45vh;
+  box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
+  height: 95%;
+  width: 100%;
+  /* max-height: 45vh;
   min-height: 120px;
-  min-width: 180px;
+  min-width: 180px; */
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 0.6vw;
+  margin: 1.25%;
 }
 

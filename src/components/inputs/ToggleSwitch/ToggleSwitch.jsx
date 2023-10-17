@@ -9,13 +9,11 @@ export default function ToggleSwitch({
   disabled,
   customClass,
 }) {
-  const [isActive, setIsActive] = useState(active);
 
   const handleChange = () => {
     if (!disabled) {
-      setIsActive(!isActive);
       if (onChange) {
-        onChange(!isActive,id);
+        onChange(!active);
       }
     }
   };
@@ -25,7 +23,7 @@ export default function ToggleSwitch({
       <label className={`switch ${disabled ? "disabled" : ""}`}>
         <input
           type="checkbox"
-          checked={isActive}
+          checked={active}
           onChange={handleChange}
           disabled={disabled}
         />

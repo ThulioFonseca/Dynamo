@@ -1,0 +1,26 @@
+.LineChartInputReader-title-label {
+  margin: 0.1vw;
+  font-size: 0.9vw;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #60656b;
+  text-align: center;
+}
+
+.LineChartInputReader-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  margin-top: 2vh;
+}
+.canvas-container {
+  height: 30vh;
+  padding: 0.5vw;
+  margin-bottom: 2vh;
+}
+
+.LineChartInputReader-icon {
+  padding: 0.6vh;
+  color: #60656b;
+}
