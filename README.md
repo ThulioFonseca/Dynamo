@@ -1,4 +1,4 @@
-# Projeto de Automação Modular
+# Dynamo - Automação Modular
 
 Bem-vindo ao Projeto Dynamo ! Este é um projeto pessoal desenvolvido por Thulio Fonseca para criar um sistema de automação modular usando React.js e o framework Vite no frontend. O projeto permite a conexão com um ESP32 via WebSockets para ler dados de sensores e enviar comandos para o microcontrolador.
 
