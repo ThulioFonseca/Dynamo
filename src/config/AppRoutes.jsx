@@ -8,10 +8,10 @@ import Device from "../pages/Device/Device";
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/settings" element={<Settings />} />
-      <Route path="/device" element={<Device />} />
+      <Route path="/Dynamo" element={<Home />} />
+      <Route path="/Dynamo/dashboard" element={<Dashboard />} />
+      <Route path="/Dynamo/settings" element={<Settings />} />
+      <Route path="/Dynamo/device" element={<Device />} />
     </Routes>
   );
 }
