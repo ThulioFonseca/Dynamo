@@ -41,7 +41,7 @@ export default function Dashboard() {
   }, [historic]);
 
   return (
-    value && (
+    //value && (
       <div style={{ height: "100%", width: "100%" }} className="row row-cols-2">
         <div
           style={{ height: "100%", width: "50%", paddingRight: "initial" }}
@@ -157,5 +157,5 @@ export default function Dashboard() {
         </div>
       </div>
     )
-  );
+ // );
 }

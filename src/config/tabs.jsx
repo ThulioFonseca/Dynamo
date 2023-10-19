@@ -11,7 +11,7 @@ import { faUsb } from "@fortawesome/free-brands-svg-icons";
 export const tabs = [
   {
     title: "Home",
-    path: "/Dynamo",
+    path: "/Dynamo/",
     icon: <span style={{fontSize:"25px", display:"flex"}} className="material-icons-sharp">home</span> ,
     disabled: false,
     active: true,
