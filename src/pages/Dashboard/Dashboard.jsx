@@ -87,11 +87,21 @@ export default function Dashboard() {
         </div>
         <div style={{ height: "30%", width: "100%" }} className="d-flex">
           <GaugeChartReader
+            id={""}
+            label={"Nível de iluminação"}
+            icon={icons.LDR}
             size={"md"}
-            value={value ? value[0].value : ""}
+            value={value ? value[0].value.toFixed(1) : ""}
             unit={"Lux"}
           />
-          <Card size={"md"} />
+          <GaugeChartReader
+            id={""}
+            label={"Temperatura Interna"}
+            icon={icons.TERMOMETRO}
+            size={"md"}
+            value={value ? (value[0].value * 0.5).toFixed(1) : ""}
+            unit={"°C"}
+          />{" "}
         </div>
 
         <div style={{ height: "43%", width: "100%" }} className="d-flex">
@@ -148,8 +158,22 @@ export default function Dashboard() {
           />
         </div>
         <div style={{ height: "30%", width: "100%" }} className="d-flex">
-          <Card size={"md"} />
-          <Card size={"md"} />
+          <GaugeChartReader
+            id={""}
+            label={"Nível de iluminação Externa"}
+            icon={icons.LDR}
+            size={"md"}
+            value={value ? (value[0].value * 0.15).toFixed(1) : ""}
+            unit={"Lux"}
+          />
+          <GaugeChartReader
+            id={""}
+            label={"Temperatura Externa"}
+            icon={icons.TERMOMETRO}
+            size={"md"}
+            value={value ? (value[0].value * 0.37).toFixed(1) : ""}
+            unit={"°C"}
+          />
         </div>
 
         <div style={{ height: "43%", width: "100%" }} className="d-flex">
@@ -157,7 +181,7 @@ export default function Dashboard() {
             data={historic}
             labels={time}
             inputId={"ef147109-3386-4af5-8d48-a19a00ad8cef"}
-            lineColor={"rgba(29, 185, 255, 1)"}
+            lineColor={"rgb(29, 185, 255)"}
             unit={"Lux"}
             icon={icons.LDR}
             title={"Iluminação interna"}

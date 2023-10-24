@@ -33,8 +33,9 @@ export default function LineChartInputReader({
           datasets: [
             {
               data: values,
-              fill: false,
-              borderColor: lineColor,
+              fill: true,
+              borderColor: lineColor, //"rgba(29, 185, 255, 1)",
+              backgroundColor: `rgba(${lineColor.slice(5, -1)}, 0.05)`, //"rgba(29, 185, 255, 0.05)",
               tension: 0.4,
               pointStyle: false,
             },
