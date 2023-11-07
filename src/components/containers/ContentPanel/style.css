@@ -8,7 +8,21 @@
   min-height: 500px;
   min-width: 300px;*/
   overflow: hidden;
-  transition: all 0.5s ease 0s;
   margin: 1.5vh .2vw 1.5vh .2vw;
   padding: .5vh 0.2vw .5vh 0.2vw;
 }
+
+.content-panel-visible {
+  border-radius: 2vw;
+  background: linear-gradient(160deg, #353a41, #1a1e20);
+  box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
+  height: 89%;
+  width: 82%;
+ /* max-height: 97vh;
+  min-height: 500px;
+  min-width: 300px;*/
+  overflow: hidden;
+  margin: 4.5vh 2.2vw 4.4vh 1vw;
+  padding: .5vh 0.2vw .5vh 0.2vw;
+}
+

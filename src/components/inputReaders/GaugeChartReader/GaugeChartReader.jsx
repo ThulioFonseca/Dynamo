@@ -2,7 +2,7 @@ import Chart from "react-apexcharts";
 import Card from "../../containers/Card/Card";
 import "./style.css";
 
-export default function GaugeChartReader({ size, value, unit, label, icon }) {
+export default function GaugeChartReader({ size, value, unit, label, icon, }) {
   const options = {
     chart: {
       id: "basic-radialBar",
@@ -85,7 +85,7 @@ export default function GaugeChartReader({ size, value, unit, label, icon }) {
     },
   };
 
-  const series = [value];
+  const series = [value > 100 ? 100 : value];
 
   return (
     <Card size={size}>

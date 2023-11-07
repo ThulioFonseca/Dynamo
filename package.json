@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -26,8 +27,10 @@
     "material-icons": "^1.13.12",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
+    "react-select": "^5.8.0",
     "websocket": "^1.0.34"
   },
   "devDependencies": {

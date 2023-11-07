@@ -1,8 +1,9 @@
 import axios from "axios";
 import config from "../config/config";
 
+const wevServer = import.meta.env.VITE_WEB_SERVER;
 const httpClient = axios.create({
-  baseURL: import.meta.env.VITE_WEB_SERVER,
+  baseURL: wevServer
 });
 
 const HttpService = {
