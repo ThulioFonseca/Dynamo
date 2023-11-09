@@ -38,6 +38,7 @@ export default function EditableTable(props) {
 
   // Função para salvar as alterações na linha
   const saveChanges = (idItemToSave) => {
+    props.loading();
     const itemToSave = nodesData.find((node) => node.id === idItemToSave);
     props.onSave(itemToSave);
     deactivateEditMode();
@@ -255,7 +256,7 @@ export default function EditableTable(props) {
                       cursor: "pointer",
                       color: "rgba(163, 42, 255, 1)",
                     }}
-                    onClick={() => saveChanges(item.id)}
+                    onClick={() => {saveChanges(item.id)}}
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
                         saveChanges(item.id);

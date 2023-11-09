@@ -1,6 +1,17 @@
 #root {
   /*background: #eef0f4;*/
-  background: #1e2124 ;
+  background: #1e2124;
+  --toastify-color-success:  linear-gradient(
+    45deg,
+    rgba(29, 185, 255, 1) 0%,
+    rgba(82, 115, 255, 1) 40%,
+    rgba(163, 42, 255, 1) 100%
+  );
+  --toastify-color-error: linear-gradient(
+    45deg,
+    #FF416C 0%,
+    #FF4B2B 100%
+  );
 
 }
 
@@ -17,3 +28,4 @@
   /*flex-wrap: nowrap;*/
   width: 100%;
 }
+

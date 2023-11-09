@@ -5,13 +5,16 @@ import ContentPanel from "./components/containers/ContentPanel/ContentPanel.jsx"
 import AppRoutes from "./config/AppRoutes.jsx";
 import { WebsocketProvider } from "./services/WebSocketProvider";
 import { useLocation } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const visibleContentPainelRoutes = ["/device", "/settings", "/serial", "/info"];
 
 function App() {
   const location = useLocation();
   const visible = visibleContentPainelRoutes.some(
-    (item) => `/Dynamo${item}` === location.pathname
+    (item) => item === location.pathname
   );
 
   return (
@@ -20,6 +23,7 @@ function App() {
         <SideBar items={tabs} />
         <ContentPanel visible={visible}>
           <AppRoutes />
+        <ToastContainer/>
         </ContentPanel>
       </div>
     </WebsocketProvider>
