@@ -78,7 +78,7 @@ export default function EditableTable(props) {
         </tr>
       </thead>
       <tbody>
-        {nodesData.map((item, key) => (
+        {nodesData.map((item, _key) => (
           <tr key={item.id}>
             <td
               style={{
@@ -226,7 +226,7 @@ export default function EditableTable(props) {
                       textAlign: "initial",
                     }}
                   >
-                    {SELECT_SIGNAL_TYPE.map((item, key) => (
+                    {SELECT_SIGNAL_TYPE.map((item, _key) => (
                       <option key={item.label} value={item.value}>
                         {item.label}
                       </option>

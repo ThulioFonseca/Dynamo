@@ -5,9 +5,8 @@ import ContentPanel from "./components/containers/ContentPanel/ContentPanel.jsx"
 import AppRoutes from "./config/AppRoutes.jsx";
 import { WebsocketProvider } from "./services/WebSocketProvider";
 import { useLocation } from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const visibleContentPainelRoutes = ["/device", "/settings", "/serial", "/info"];
 
@@ -23,7 +22,7 @@ function App() {
         <SideBar items={tabs} />
         <ContentPanel visible={visible}>
           <AppRoutes />
-        <ToastContainer/>
+          <ToastContainer />
         </ContentPanel>
       </div>
     </WebsocketProvider>

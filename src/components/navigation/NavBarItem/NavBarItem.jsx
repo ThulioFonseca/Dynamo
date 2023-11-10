@@ -1,8 +1,9 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
 import "./style.css";
 
 export default function NavbarItem(props) {
-  const { title, path, icon, disabled, active } = props;
+  const { title, path, icon, disabled } = props;
 
   const location = useLocation();
   const isActive = location.pathname === path;
@@ -20,3 +21,10 @@ export default function NavbarItem(props) {
     )
   );
 }
+
+NavbarItem.propTypes = {
+  disabled: PropTypes.bool.isRequired,
+  icon: PropTypes.element.isRequired,
+  path: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
