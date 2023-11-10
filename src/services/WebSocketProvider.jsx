@@ -1,4 +1,5 @@
 import { createContext, useEffect, useRef, useState } from "react";
+import { toast } from "react-toastify";
 
 export const WebsocketContext = createContext({
   isReady: false,
@@ -13,6 +14,7 @@ export const WebsocketProvider = ({ children }) => {
   const [historic, setHistoric] = useState([]);
 
   const ws = useRef(null);
+  const timeoutRef = useRef(null);
 
   const sendMessage = (message) => {
     if (isReady) {
@@ -22,26 +24,46 @@ export const WebsocketProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
+  const handleOpen = () => {
+    setIsReady(true);
+    resetTimeout();
+  };
+
+  const handleClose = () => {
+    setIsReady(false);
+  };
+
+  const handleMessage = (event) => {
+    const data = JSON.parse(event.data);
+    setValue(data);
+    resetTimeout();
+  };
+
+  const resetTimeout = () => {
+    clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      console.log("Fechando conexão devido à inatividade.");
+      ws.current.close();
+      createWebSocket();
+    }, 20000); // 20 segundos
+  };
+
+  const createWebSocket = () => {
     const socket = new WebSocket(import.meta.env.VITE_WEB_SOCKET);
 
-    socket.onopen = () => {
-      setIsReady(true);
-    };
-
-    socket.onclose = () => {
-      setIsReady(false);
-    };
-
-    socket.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      setValue(data);
-    };
+    socket.onopen = handleOpen;
+    socket.onclose = handleClose;
+    socket.onmessage = handleMessage;
 
     ws.current = socket;
+  };
+
+  useEffect(() => {
+    createWebSocket();
 
     return () => {
-      //ws.current.close();
+      clearTimeout(timeoutRef.current);
+      ws.current.close();
     };
   }, []);
 
@@ -56,6 +78,20 @@ export const WebsocketProvider = ({ children }) => {
       });
     }
   }, [value]);
+
+  useEffect(() => {
+    if (isReady) {
+      toast.success("WebSocket conectado!", {
+        position: toast.POSITION.BOTTOM_CENTER,
+        theme: "colored",
+      });
+    } else {
+      toast.error("WebSocket desconectado!", {
+        position: toast.POSITION.BOTTOM_CENTER,
+        theme: "colored",
+      });
+    }
+  }, [isReady]);
 
   return (
     <WebsocketContext.Provider
