@@ -5,6 +5,7 @@ export const ICONS = {
   EDIT: "edit",
   DELETE: "delete",
   SAVE: "save",
+  CHIP: "memory"
 };
 
 export const SELECT_SIGNAL_TYPE = [
