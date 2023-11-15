@@ -14,19 +14,8 @@ export default function SideBar(props) {
 
   return (
     <>
-      <div
-        className="sidebar-dark"
-        style={{
-          width: isOpen ? "15vw" : "5vw",
-          borderRadius: isOpen ? "2vw" : "0.8vw",
-        }}
-      >
-        <div
-          className="sidebar-header"
-          style={{
-            transition: "all 0.5s ease 0.0s",
-          }}
-        >
+      <div className={isOpen ? "sidebar-dark-expanded" : "sidebar-dark"}>
+        <div className="sidebar-header">
           <div
             style={{
               display: "flex",
@@ -44,15 +33,9 @@ export default function SideBar(props) {
               }}
             />
           </div>
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <hr
-            style={{
-              width: "12vw",
-              color: "rgb(114, 130, 153)",
-              margin: "0 0.2vw 1.5vw 0.2vw",
-            }}
-          />
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <hr className="sideBar-separator"/>
+          </div>
         </div>
         <nav>
           <ul className="sidebar-itens">

@@ -15,6 +15,7 @@ export default function NavbarItem(props) {
           display: expanded ? "block" : "flex",
           alignItems: "center",
           justifyContent: "center",
+
         }}
       >
         <li>
@@ -42,7 +43,6 @@ export default function NavbarItem(props) {
               className="title"
               style={{
                 display: expanded ? "block" : "none",
-                transition: "all 0.3s ease 0s",
               }}
             >
               {title}

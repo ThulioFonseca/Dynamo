@@ -4,7 +4,8 @@ import { ICONS } from "../../util/const";
 import { WebsocketContext } from "../../services/WebSocketProvider";
 import LineChartInputReader from "../../components/inputReaders/LineChartInputReader/LineChartInputReader";
 import GaugeChartReader from "../../components/inputReaders/GaugeChartReader/GaugeChartReader";
-import { Spinner } from "react-bootstrap";
+import { Col, Row, Spinner } from "react-bootstrap";
+import { auto } from "@popperjs/core";
 
 const spinnerStyle = {
   display: "flex",
@@ -50,11 +51,9 @@ export default function Dashboard() {
         newActiveDevices[item.id] = item.value === 1;
       });
       setActiveDevices(newActiveDevices);
-      setLoading(false)
-
-    }
-    else{
-      setLoading(true)
+      setLoading(false);
+    } else {
+      setLoading(true);
     }
   }, [value]);
 
@@ -77,11 +76,8 @@ export default function Dashboard() {
       <Spinner animation="border" variant="info" />
     </div>
   ) : (
-    <div style={{ height: "100%", width: "100%" }} className="row row-cols-2">
-      <div
-        style={{ height: "100%", width: "50%", paddingRight: "initial" }}
-        className="col"
-      >
+    <Row style={{width:"100%", height:"100%"}}>
+      <Col xl={6} style={{padding:"0% 0% 0% 1%"}}>
         <div
           style={{ height: "25%", width: "100%", alignItems: "end" }}
           className="d-flex"
@@ -149,11 +145,8 @@ export default function Dashboard() {
             title={getDeviceLabel("ef147109-3386-4af5-8d48-a19a00ad8cef")}
           />
         </div>
-      </div>
-      <div
-        style={{ height: "100%", width: "50%", paddingLeft: "initial" }}
-        className="col"
-      >
+      </Col>
+      <Col xl={6} style={{padding:"0%"}}>
         <div
           style={{ height: "25%", width: "100%", alignItems: "end" }}
           className="d-flex"
@@ -221,7 +214,7 @@ export default function Dashboard() {
             title={getDeviceLabel("ef147109-3386-4af5-8d48-a19a00ad8cef")}
           />
         </div>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 }
