@@ -5,7 +5,6 @@ import { WebsocketContext } from "../../services/WebSocketProvider";
 import LineChartInputReader from "../../components/inputReaders/LineChartInputReader/LineChartInputReader";
 import GaugeChartReader from "../../components/inputReaders/GaugeChartReader/GaugeChartReader";
 import { Col, Row, Spinner } from "react-bootstrap";
-import { auto } from "@popperjs/core";
 
 const spinnerStyle = {
   display: "flex",
@@ -77,7 +76,7 @@ export default function Dashboard() {
     </div>
   ) : (
     <Row style={{width:"100%", height:"100%"}}>
-      <Col xl={6} style={{padding:"0% 0% 0% 1%"}}>
+      <Col lg={6} style={{padding:"0% 0% 0% 1%"}}>
         <div
           style={{ height: "25%", width: "100%", alignItems: "end" }}
           className="d-flex"
@@ -146,7 +145,7 @@ export default function Dashboard() {
           />
         </div>
       </Col>
-      <Col xl={6} style={{padding:"0%"}}>
+      <Col lg={6} style={{padding:"0%"}}>
         <div
           style={{ height: "25%", width: "100%", alignItems: "end" }}
           className="d-flex"

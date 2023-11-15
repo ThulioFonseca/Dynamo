@@ -1,7 +1,7 @@
 import "./style.css";
 import Card from "../../containers/Card/Card";
 import ToggleSwitch from "../../inputs/ToggleSwitch/ToggleSwitch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function DigitalOutputController({
   active,
@@ -14,18 +14,21 @@ export default function DigitalOutputController({
   const [isSwitchOn, setIsSwitchOn] = useState(active);
 
   const handleSwitchChange = (newState) => {
-    
     const messageObject = {
       type: "controlEvent",
       id: id,
       value: newState,
     };
-    
+
     const serializedMessage = JSON.stringify(messageObject);
-    
+
     setIsSwitchOn(newState);
     onChange(serializedMessage);
   };
+
+  useEffect(() => {
+    setIsSwitchOn(active);
+  }, [active]);
 
   return (
     <Card size={"sm"}>
@@ -33,7 +36,7 @@ export default function DigitalOutputController({
         <div>
           <div className="doc-device-icon-dark">
             <span
-              style={{ fontSize: "3.5vw" }}
+              style={{ fontSize: "50px" }}
               className={
                 active
                   ? "material-icons-outlined doc-icon-active "
@@ -47,7 +50,7 @@ export default function DigitalOutputController({
 
           <div className="doc-button">
             <span>
-              <ToggleSwitch active={active || isSwitchOn} onChange={handleSwitchChange} />
+              <ToggleSwitch active={isSwitchOn} onChange={handleSwitchChange} />
             </span>
           </div>
         </div>
