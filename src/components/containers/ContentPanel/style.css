@@ -3,13 +3,13 @@
   /*background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
  /* box-shadow: 5px 5px 10px #b1b1b1, -5px -5px 10px #ffffff;*/
   height: 95%;
-  width: 85%;
+  width: 92%;
  /* max-height: 97vh;
   min-height: 500px;
   min-width: 300px;*/
   overflow: hidden;
-  margin: 1.5vh .2vw 1.5vh .2vw;
-  padding: .5vh 0.2vw .5vh 0.2vw;
+  margin: 1.5vh .8vw 1.5vh .8vw;
+  padding: .5vh 0.1vw .5vh 0.1vw;
 }
 
 .content-panel-visible {
@@ -17,12 +17,12 @@
   background: linear-gradient(160deg, #353a41, #1a1e20);
   box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
   height: 89%;
-  width: 82%;
+  width: 92%;
  /* max-height: 97vh;
   min-height: 500px;
   min-width: 300px;*/
   overflow: hidden;
-  margin: 4.5vh 2.2vw 4.4vh 1vw;
-  padding: .5vh 0.2vw .5vh 0.2vw;
+  margin: 4.5vh 0.8vw 4.4vh 0.8vw;
+  padding: .5vh 0.2vw .5vh 0.1vw;
 }
 
