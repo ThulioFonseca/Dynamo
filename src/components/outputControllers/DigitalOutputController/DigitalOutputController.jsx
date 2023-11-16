@@ -36,7 +36,7 @@ export default function DigitalOutputController({
         <div>
           <div className="doc-device-icon-dark">
             <span
-              style={{ fontSize: "50px" }}
+              style={{ fontSize: "3.5vmax" }}
               className={
                 active
                   ? "material-icons-outlined doc-icon-active "

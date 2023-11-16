@@ -19,7 +19,7 @@ export default function ToggleSwitch({
   };
 
   return (
-    <div className={`toggle-switch ${customClass || ""}`}>
+    <div className={"toggle-switch"}>
       <label className={`switch ${disabled ? "disabled" : ""}`}>
         <input
           type="checkbox"
