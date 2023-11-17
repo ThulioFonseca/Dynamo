@@ -5,7 +5,7 @@
   justify-content: center;
   margin: 0.2vw;
   padding: 0;
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
 }
 
 .doc-device-icon-dark {
@@ -18,7 +18,7 @@
 }
 
 .doc-icon-inactive {
-  color: rgb(76, 84, 92);
+  color: var(--default-text-color)
 }
 
 .doc-icon-active {
@@ -30,7 +30,7 @@
   font-size: 90%;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: #60656b;
+  color: var(--default-text-color);
   text-align: center;
 }
 

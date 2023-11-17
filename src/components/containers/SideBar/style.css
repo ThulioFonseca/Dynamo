@@ -16,26 +16,26 @@
 
 .sidebar-dark-expanded {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
   height: 95vh;
-  width: 17vw;  
+  width: 25vw;  
   overflow: hidden;
   transition: all 0.3s ease 0s;
-  margin: 2vh 2vh 0vw 1.2vw;
+  margin:1%;
   z-index: 10;
   min-width: 180px;
 }
 
 .sidebar-dark {
   border-radius: 0.8vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
   height: 95vh;
   width: 5vw;
   overflow: hidden;
   transition: all 0.5s ease 0s;
-  margin: 2vh 2vh 0vw 1.2vw;
+  margin: 1%;
   z-index: 10;
   min-width: 80px;
 
@@ -68,6 +68,39 @@
 
 .sideBar-separator{
   width: 15vw;
-  color: rgb(114, 130, 153);
+  color: var(--secondary-text-color);
   /*margin: 0 0.2vw 1.5vw 0.2vw;*/
+}
+
+.sidebar-footer{
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 35%;  
+  color: var(--default-text-color)
+}
+
+@media (max-height: 800px) {
+  .sidebar-footer{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 20%;  
+    color: var(--default-text-color)
+  }
+}
+
+.sidebar-logout-icon{
+
+  color: var(--secondary-color);
+  padding-Left: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-Size: 25px !important
+
+}
+
+.sidebar-logout-icon:hover{
+  color: var(--primary-color);
+
 }

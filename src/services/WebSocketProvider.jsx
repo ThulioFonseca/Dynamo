@@ -1,5 +1,6 @@
 import { createContext, useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
+import { useAuth } from "./AuthProvider";
 
 export const WebsocketContext = createContext({
   isReady: false,
@@ -12,6 +13,7 @@ export const WebsocketProvider = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
   const [value, setValue] = useState(null);
   const [historic, setHistoric] = useState([]);
+  const { isAuthenticated } = useAuth();
 
   const ws = useRef(null);
   const timeoutRef = useRef(null);
@@ -59,13 +61,19 @@ export const WebsocketProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    createWebSocket();
+    if (isAuthenticated && !isReady) {
+      createWebSocket();
 
-    return () => {
-      clearTimeout(timeoutRef.current);
-      ws.current.close();
-    };
-  }, []);
+      return () => {
+        clearTimeout(timeoutRef.current);
+        ws.current?.close();
+      };
+    } else {
+      ws.current?.close();
+      handleClose();
+      setValue(null);
+    }
+  }, [isAuthenticated]);
 
   useEffect(() => {
     if (value) {
@@ -85,7 +93,7 @@ export const WebsocketProvider = ({ children }) => {
         position: toast.POSITION.BOTTOM_CENTER,
         theme: "colored",
       });
-    } else {
+    } else if (!isReady && isAuthenticated) {
       toast.error("WebSocket desconectado!", {
         position: toast.POSITION.BOTTOM_CENTER,
         theme: "colored",

@@ -3,7 +3,7 @@
   font-size: 0.9vw;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: #60656b;
+  color: var(--default-text-color);
   text-align: center;
 }
 
@@ -22,5 +22,5 @@
 
 .LineChartInputReader-icon {
   padding: 0.6vh;
-  color: #60656b;
+  color: var(--default-text-color);
 }

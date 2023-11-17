@@ -1,20 +1,25 @@
 #root {
-  /*background: #eef0f4;*/
-  background: #1e2124;
-  --toastify-color-success: linear-gradient(
-    45deg,
-    rgba(29, 185, 255, 1) 0%,
-    rgba(82, 115, 255, 1) 40%,
-    rgba(163, 42, 255, 1) 100%
-  );
-  --toastify-color-error: linear-gradient(45deg, #ff416c 0%, #ff4b2b 100%);
+  --primary-color: rgba(29, 185, 255, 1);
+  --secondary-color: rgba(163, 42, 255, 1);
+  --ternary-color: rgba(82, 115, 255, 1);
 
-  --primary: linear-gradient(
+  --card-background-color-dark: linear-gradient(160deg, #353a41, #1a1e20);
+  --default-gradient: linear-gradient(
     45deg,
     rgba(29, 185, 255, 1) 0%,
     rgba(82, 115, 255, 1) 40%,
     rgba(163, 42, 255, 1) 100%
   );
+  --default-error-gradient: linear-gradient(45deg, #ff416c 0%, #ff4b2b 100%);
+  --default-text-color: rgb(76, 84, 92);
+  --secondary-text-color: rgb(168, 168, 168);
+
+  --toastify-color-success: var(--default-gradient);
+  --toastify-color-error: var(--default-error-gradient);
+
+  --bs-focus-ring: rgba(29, 185, 255, 1);
+
+  background: #1e2124;
 }
 
 *,
@@ -27,8 +32,6 @@
   height: 100vh;
   padding: 0;
   display: flex;
-  /*flex-wrap: nowrap;*/
-  width: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
-
-

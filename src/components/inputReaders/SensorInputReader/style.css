@@ -5,7 +5,7 @@
   justify-content: center;
   margin: 0.2vw;
   padding: 0;
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
 }
 
 .sir-label {
@@ -13,7 +13,7 @@
   font-size: 0.7vw;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: #60656b;
+  color: var(--default-text-color);
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
   font-size: 2vw;
   font-weight: 200;
   font-family: "Poppins", sans-serif;
-  color: #60656b;
+  color: var(--default-text-color);
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   font-size: 0.9vw;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  color: #60656b;
+  color: var(--default-text-color);
 }
 
 .sir-value-container * {
@@ -41,5 +41,5 @@
 .sir-icon {
   align-items: start;
   justify-content: left;
-  color: #60656b;
+  color: var(--default-text-color);
 }

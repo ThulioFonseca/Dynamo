@@ -2,7 +2,7 @@
     font-size: 0.9vw;
     font-weight: 200;
     font-family: "Poppins", sans-serif;
-    color: #60656b;
+    color: var(--default-text-color);
     text-align: center;
     justify-content: center;
     align-items: center;

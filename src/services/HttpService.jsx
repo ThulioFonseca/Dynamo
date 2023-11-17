@@ -7,12 +7,15 @@ const httpClient = axios.create({
 });
 
 const HttpService = {
-  async request(endpoint, method = "GET", data = null) {
+  async request(endpoint, method = "GET", data = null, contentType = 'application/json') {
     try {
       const config = {
         method,
         url: endpoint,
         data,
+        headers: {
+          'Content-Type': contentType,
+        },
       };
 
       const response = await httpClient(config);
@@ -26,8 +29,8 @@ const HttpService = {
     return this.request(endpoint, "GET", { params });
   },
 
-  async post(endpoint, data) {
-    return this.request(endpoint, "POST", data);
+  async post(endpoint, data, contentType) {
+    return this.request(endpoint, "POST", data, contentType);
   },
 
   async put(endpoint, data) {

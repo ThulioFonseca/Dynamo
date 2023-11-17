@@ -30,7 +30,7 @@
 
 .content-panel-visible {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -15px -15px 20px #1d2024;
   height: 89%;
   width: 92%;

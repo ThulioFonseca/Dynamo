@@ -8,7 +8,7 @@
 }
 
 .info-container-content-left {
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
   text-align: initial;
   padding: 3%;
   margin-left: 30%;
@@ -18,7 +18,7 @@
 }
 
 .info-container-content-right {
-    color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
     text-align: initial;
     padding: 3%;
     margin-left: 2%;
@@ -30,7 +30,7 @@
 .info-device-model-title {
   font-size: 2.1vw;
   font-weight: 700;
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
   text-align: initial;
   margin: 1%;
 }
@@ -38,7 +38,7 @@
 .info-container-button {
     font-size: 2.1vw;
     font-weight: 700;
-    color: rgb(168, 168, 168);
+    color: var(--secondary-text-color);
     text-align: initial;
     margin: 1%;
     display: flex;
@@ -49,18 +49,18 @@
 .info-title {
   font-size: 1.5vw;
   font-weight: 400;
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
   text-align: initial;
   margin-bottom: 5%;
 }
 
 .info-device-model-icon {
   padding: 0.2vh;
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
 }
 
 .info-item {
-  color: rgb(168, 168, 168);
+  color: var(--secondary-text-color);
   margin: 0.8%;
   font-size: 0.9vw;
 }

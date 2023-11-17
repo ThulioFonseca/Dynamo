@@ -7,11 +7,13 @@ import { WebsocketProvider } from "./services/WebSocketProvider";
 import { useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider, useAuth } from "./services/AuthProvider.jsx";
 
 const visibleContentPainelRoutes = ["/device", "/settings", "/serial", "/info"];
 
 function App() {
   const location = useLocation();
+  const { isAuthenticated } = useAuth();
   const visible = visibleContentPainelRoutes.some(
     (item) => item === location.pathname
   );
@@ -19,11 +21,17 @@ function App() {
   return (
     <WebsocketProvider>
       <div className="principal-container">
-        <SideBar items={tabs} />
-        <ContentPanel visible={visible}>
+        {isAuthenticated ? (
+          <>
+            <SideBar items={tabs} />
+            <ContentPanel visible={visible}>
+              <AppRoutes />
+            </ContentPanel>
+          </>
+        ) : (
           <AppRoutes />
-          <ToastContainer />
-        </ContentPanel>
+        )}
+        <ToastContainer />
       </div>
     </WebsocketProvider>
   );

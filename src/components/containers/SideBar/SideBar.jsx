@@ -1,21 +1,25 @@
 import PropTypes from "prop-types";
 import Logo_preto_sem_sombra from "../../../assets/Logo_preto_sem_sombra.svg";
-import Logo_Simbolo from "../../../assets/Logo_Simbolo.svg";
 import NavbarItem from "../../navigation/NavBarItem/NavBarItem";
-import "./style.css";
 import { useState } from "react";
-import { arrow } from "@popperjs/core";
+import { Button, Col, Row } from "react-bootstrap";
+import { useAuth } from "../../../services/AuthProvider";
+import "./style.css";
+import { ICONS } from "../../../util/const";
 
 export default function SideBar(props) {
   const { items } = props;
   const [isOpen, setIsOpen] = useState(true);
+  const { logout } = useAuth();
 
   const toggleExpand = () => setIsOpen(!isOpen);
 
   return (
     <>
-      <div className={isOpen ? "sidebar-dark-expanded" : "sidebar-dark"}>
-        <div className="sidebar-header">
+      <div
+        className={isOpen ? "sidebar-dark-expanded col-sm-2" : "sidebar-dark"}
+      >
+        <Row className="sidebar-header">
           <div
             style={{
               display: "flex",
@@ -34,23 +38,49 @@ export default function SideBar(props) {
             />
           </div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <hr className="sideBar-separator"/>
+            <hr className="sideBar-separator" />
           </div>
-        </div>
-        <nav>
-          <ul className="sidebar-itens">
-            {items.map((item, key) => (
-              <NavbarItem
-                key={item.title}
-                title={item.title}
-                path={item.path}
-                icon={item.icon}
-                disabled={item.disabled}
-                expanded={isOpen}
-              />
-            ))}
-          </ul>
-        </nav>
+        </Row>
+        <Row>
+          <nav>
+            <ul className="sidebar-itens">
+              {items.map((item, key) => (
+                <NavbarItem
+                  key={item.title}
+                  title={item.title}
+                  path={item.path}
+                  icon={item.icon}
+                  disabled={item.disabled}
+                  expanded={isOpen}
+                />
+              ))}
+            </ul>
+          </nav>
+        </Row>
+        <Row className="sidebar-footer">
+          <Col className=" d-flex align-content-center justify-content-center text-center">
+            <span
+              style={{
+                textAlign: "center",
+                color: "grey",
+                display: isOpen ? "block" : "none",
+              }}
+            >
+              Logout
+            </span>
+            <span
+              className="sidebar-logout-icon material-icons-outlined"
+              onClick={() => logout()}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  logout();
+                }
+              }}
+            >
+              {ICONS.LOGOUT}
+            </span>
+          </Col>
+        </Row>
       </div>
       <div
         className=""

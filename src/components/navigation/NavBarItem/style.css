@@ -3,7 +3,7 @@
   margin: 0.6vh;
   display: flex;
   text-decoration: none;
-  color: rgb(76, 84, 92);
+  color: var(--default-text-color);
   list-style: none;
   text-align: center;
   justify-items: center;
@@ -12,10 +12,9 @@
 }
 
 .item:hover {
-  border-radius: 0;
-  color: #4786ff;
-  border-left: 5px solid #2fa5ff;
-  transform: scale(1.02);
+  border-radius: 0px;
+  color: var(--secondary-text-color);
+
 }
 
 .item:active {
@@ -30,14 +29,8 @@
   text-decoration: none;
   list-style: none;
   flex-wrap: nowrap;
-
   border-radius: calc(2vh / 3);
-  background: linear-gradient(
-    45deg,
-    rgba(29, 185, 255, 1) 0%,
-    rgba(82, 115, 255, 1) 40%,
-    rgba(163, 42, 255, 1) 100%
-  );
+  background: var(--default-gradient);
   color: rgb(235, 235, 235);
   box-shadow: rgba(0, 0, 0, 0.42) 1px 1px 2px inset,
     rgba(241, 241, 241, 0.45) 0px 1px 0px 0px;

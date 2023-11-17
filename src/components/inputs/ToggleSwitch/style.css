@@ -67,12 +67,7 @@
 }
 
 .switch input:checked + .slider {
-  background: linear-gradient(
-    45deg,
-    rgba(29, 185, 255, 1) 0%,
-    rgba(82, 115, 255, 1) 40%,
-    rgba(163, 42, 255, 1) 100%
-  );
+  background: var(--default-gradient)
 }
 
 .switch input:focus + .slider {

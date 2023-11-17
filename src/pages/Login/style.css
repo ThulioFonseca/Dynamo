@@ -1,0 +1,22 @@
+.login-logo {
+  text-align: center;
+  /* margin: 1vw 2vw 1.5vw 2vw; */
+  margin: 15% 15% 5% 15%;
+  padding: 0;
+}
+
+.card-login {
+  border-radius: 2vw;
+  background: var(--card-background-color-dark);
+  box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
+  /* height: 92%;
+        /* max-height: 25vh;
+        min-height: 8.5vw;
+        min-width: 18vw; */
+  /* //width: 50%;  */
+  overflow: hidden;
+  transition: all 0.3s ease 0s;
+  margin: 1.25%;
+  padding: 5%;
+  display: block;
+}

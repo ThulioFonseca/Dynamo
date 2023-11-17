@@ -17,7 +17,7 @@
 
 .card-sm-dark {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
   height: 85%;
   width: 100%;
@@ -49,7 +49,7 @@
 
 .card-md-dark {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
   height: 92%;
   width: 50%;
@@ -77,7 +77,7 @@
 
 .card-lg-dark {
   border-radius: 2vw;
-  background: linear-gradient(160deg, #353a41, #1a1e20);
+  background: var(--card-background-color-dark);
   box-shadow: 15px 15px 20px #15171a, -5px -5px 15px #1d2024;
   height: 95%;
   width: 100%;
